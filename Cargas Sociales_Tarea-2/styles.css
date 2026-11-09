@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #00209f;
+}
+
+section {
+  background-color: white;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h2 {
+  font-size: 18px;
+  color: #333;
+}
+
+input {
+  padding: 6px;
+  margin: 5px 0;
+}
+
+button {
+  background-color: #00209f;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #001266;
+}
+
+#resultadoSalario,
+#mensajeEdad,
+#promedio {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#listaEstudiantes div {
+  background-color: #e8eefc;
+  padding: 6px;
+  margin: 4px 0;
+  border-radius: 4px;
+}

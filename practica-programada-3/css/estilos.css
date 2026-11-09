@@ -1,0 +1,107 @@
+:root {
+    --azul: #1b3a6b;
+    --azul-claro: #e8eef8;
+    --verde: #1e7d4f;
+    --rojo: #b3261e;
+    --gris: #5f6b7a;
+    --borde: #d6dce5;
+    --fondo: #f4f6fa;
+    --blanco: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--fondo);
+    color: #1f2933;
+    line-height: 1.5;
+}
+
+.contenedor {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+}
+
+.encabezado { margin-bottom: 20px; }
+.curso { margin: 0; color: var(--gris); font-size: .85rem; }
+.encabezado h1 { margin: 4px 0; color: var(--azul); font-size: 2rem; }
+.subtitulo { margin: 0; color: var(--gris); }
+
+.tarjeta {
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 18px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+}
+
+.tarjeta h2 { margin: 0 0 14px; font-size: 1.15rem; color: var(--azul); }
+
+/* Formulario */
+form { display: grid; grid-template-columns: 1fr 180px auto; gap: 12px; align-items: end; }
+.campo { display: flex; flex-direction: column; gap: 4px; }
+label { font-size: .85rem; font-weight: 600; color: var(--gris); }
+
+input {
+    padding: 10px 12px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+input:focus { outline: 2px solid var(--azul); outline-offset: 1px; }
+input.invalido { border-color: var(--rojo); }
+
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: .95rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+.btn-primario   { background: var(--azul); color: var(--blanco); }
+.btn-secundario { background: var(--azul-claro); color: var(--azul); }
+.btn-peligro    { background: #fbeae9; color: var(--rojo); }
+.btn:hover { filter: brightness(.95); }
+
+.mensaje { min-height: 1.2em; margin: 10px 0 0; font-size: .9rem; }
+.mensaje.error { color: var(--rojo); }
+.mensaje.ok { color: var(--verde); }
+
+/* Tabla */
+.tabla-wrapper { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 10px 8px; text-align: left; border-bottom: 1px solid var(--borde); }
+th { font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; color: var(--gris); }
+.derecha { text-align: right; font-variant-numeric: tabular-nums; }
+.vacio { text-align: center; color: var(--gris); padding: 20px; }
+
+/* Resumen */
+dl { margin: 0; }
+.fila { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--borde); }
+.fila dt { color: var(--gris); }
+.fila dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+.positivo { color: var(--verde); }
+.fila.total {
+    border-bottom: none;
+    margin-top: 8px;
+    padding: 14px 12px;
+    background: var(--azul-claro);
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+.fila.total dt, .fila.total dd { color: var(--azul); font-weight: 700; }
+
+.nota { font-size: .8rem; color: var(--gris); margin: 12px 0 0; }
+.acciones { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+
+@media (max-width: 600px) {
+    form { grid-template-columns: 1fr; }
+}

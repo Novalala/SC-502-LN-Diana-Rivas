@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Estado de Cuenta - Tarjeta de Crédito</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <main class="contenedor">
+        <header class="encabezado">
+            <h1>Estado de Cuenta</h1>
+            <p class="subtitulo">Tarjeta de crédito</p>
+        </header>
+
+        <section class="tarjeta">
+            <h2>Registrar transacción</h2>
+            <form id="formTransaccion" novalidate>
+                <div class="campo">
+                    <label for="descripcion">Descripción</label>
+                    <input type="text" id="descripcion" maxlength="60" placeholder="Ej: Compra en supermercado" required>
+                </div>
+                <div class="campo">
+                    <label for="monto">Monto (₡)</label>
+                    <input type="number" id="monto" min="0.01" step="0.01" placeholder="0.00" required>
+                </div>
+                <button type="submit" class="btn btn-primario">Agregar</button>
+            </form>
+            <p id="mensaje" class="mensaje" role="alert"></p>
+        </section>
+
+        <section class="tarjeta">
+            <h2>Transacciones registradas</h2>
+            <div class="tabla-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Descripción</th>
+                            <th class="derecha">Monto</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTabla"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="tarjeta resumen">
+            <h2>Resumen</h2>
+            <dl>
+                <div class="fila"><dt>Monto total de contado</dt><dd id="montoContado">₡0.00</dd></div>
+                <div class="fila"><dt>Monto con interés (2.6%)</dt><dd id="montoConInteres">₡0.00</dd></div>
+                <div class="fila"><dt>Cash back (0.1% del contado)</dt><dd id="cashBack" class="positivo">₡0.00</dd></div>
+                <div class="fila total"><dt>Monto final a pagar</dt><dd id="montoFinal">₡0.00</dd></div>
+            </dl>
+            <p class="nota" id="fechaGenerado"></p>
+
+            <div class="acciones">
+                <a href="estado_cuenta.txt" target="_blank" class="btn btn-secundario">Ver estado_cuenta.txt</a>
+                <button type="button" id="btnReiniciar" class="btn btn-peligro">Reiniciar ejemplo</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

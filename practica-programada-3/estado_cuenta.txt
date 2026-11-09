@@ -1,0 +1,20 @@
+==============================================================
+            ESTADO DE CUENTA - TARJETA DE CREDITO
+==============================================================
+Fecha de generacion: 09/11/2026 01:10:40
+
+ID     DESCRIPCION                                      MONTO
+--------------------------------------------------------------
+1      Supermercado Auto Mercado                 ₡45,500.00
+2      Gasolinera Delta                          ₡22,000.00
+3      Restaurante Rostipollos                   ₡18,750.50
+4      Farmacia Fischel                          ₡12,300.00
+5      Servicio de streaming                      ₡7,900.00
+6      compra en el Mc Donalds                    ₡4,000.00
+--------------------------------------------------------------
+Monto total de contado:                         ₡110,450.50
+Monto con interes (2.6%):                       ₡113,322.21
+Cash back (0.1% del contado):                      -₡110.45
+==============================================================
+MONTO FINAL A PAGAR:                            ₡113,211.76
+==============================================================
